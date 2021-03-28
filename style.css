@@ -2,7 +2,7 @@
 Theme Name: My Little Montessorian
 Author: Syed MH
 Author URI: https://syedmh.com/
-Description: Custom theme built for My Little Montessorian
+Description: Custom theme built for My Little Montessorian with Underscorse (_s) by Syed MH from Blue Synergy.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -66,7 +66,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
 
