@@ -1,0 +1,11 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file is only meant to import all theme styles
+// so that they can be compiled and minified on save
+// to then be included in the theme pacakge.
+//
+// Do not style elements directly in this file.
+
+@import "./variables/variables";
+@import "./routes/routes";

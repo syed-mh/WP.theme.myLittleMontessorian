@@ -1,0 +1,13 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares global gradient variables used throughout
+// the site.
+//
+// Do not style elements directly in this file.
+
+$gradient--one: linear-gradient(-120deg, $color-two--100, $color-two--60);
+$gradient--two: linear-gradient(-120deg, $color-one--100, $color-two--80);
+$gradient--three: linear-gradient(45deg, $color-five--100, $color-six--60);
+$gradient--four: linear-gradient(-120deg, $color-three--100, $color-five--60);
+$gradient--five: linear-gradient(-120deg, $color-four--90, $color-four--60);

@@ -1,0 +1,36 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file imports and declares font-related variables
+// used throughout the site.
+//
+// Do not style elements directly in this file.
+
+@font-face {
+  font-family: "Josephin Sans Regular";
+  src: url("../../fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Josephin Sans Bold";
+  src: url("../../fonts/JosefinSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Moon Flower Bold";
+  src: url("../../fonts/Moon-Flower-Bold.ttf") format("truetype");
+}
+
+$font-family--regular: "Josephin Sans Regular", sans-serif;
+$font-family--bold: "Josephin Sans Bold", sans-serif;
+$font-family--title: "Moon Flower Bold", sans-serif;
+
+$font-size--decorative-l: 12.7rem;
+$font-size--decorative: 9.7rem;
+$font-size--h1-l: 7.2rem;
+$font-size--h1: 6.4rem;
+$font-size--h2: 5.2rem;
+$font-size--h3: 3.6rem;
+$font-size--h4: 2.4rem;
+$font-size--p: 1.8rem;
+$font-size--base: 10px;
+
+$line-height: 1.5;

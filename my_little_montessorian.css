@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "Josephin Sans Regular";
+	src: url("../../fonts/JosefinSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+	font-family: "Josephin Sans Bold";
+	src: url("../../fonts/JosefinSans-Bold.ttf") format("truetype"); }
+
+@font-face {
+	font-family: "Moon Flower Bold";
+	src: url("../../fonts/Moon-Flower-Bold.ttf") format("truetype"); }
