@@ -1,11 +1,1 @@
-@font-face {
-	font-family: "Josephin Sans Regular";
-	src: url("../../fonts/JosefinSans-Regular.ttf") format("truetype"); }
-
-@font-face {
-	font-family: "Josephin Sans Bold";
-	src: url("../../fonts/JosefinSans-Bold.ttf") format("truetype"); }
-
-@font-face {
-	font-family: "Moon Flower Bold";
-	src: url("../../fonts/Moon-Flower-Bold.ttf") format("truetype"); }
+@font-face{font-family:"Josephin Sans Regular";src:url("./fonts/JosefinSans-Regular.ttf") format("truetype")}@font-face{font-family:"Josephin Sans Bold";src:url("./fonts/JosefinSans-Bold.ttf") format("truetype")}@font-face{font-family:"Moon Flower Bold";src:url("./fonts/Moon-Flower-Bold.ttf") format("truetype")}header,div,span,nav{font-size:0}button,button:hover,button:focus{padding:0;margin:0;outline:none;border:0}input,input:hover,input:focus,select,select:hover,select:focus,textarea,textarea:hover,textarea:focus{padding:0;outline:none;border:0}h1{font-size:6.4rem;font-family:"Moon Flower Bold",sans-serif}h2{font-size:5.2rem}h3{font-size:3.6rem}h4{font-size:2.4rem}h5{font-size:2rem}h1,h2,h3,h4,input,textarea,select{line-height:1em}h1,h2,h3,h4,h5,h6,p,li{margin:0.5em 0}h2,h3,h4,h5,h6{font-family:"Josephin Sans Bold",sans-serif}h5,h6,p,li,a{line-height:1.5em}h6,p,li,a,input,textarea,button,select{font-size:1.8rem;font-family:"Josephin Sans Regular",sans-serif}.typography--regular{font-family:"Josephin Sans Bold",sans-serif}.typography--regular{font-family:"Josephin Sans Regular",sans-serif}.typography--accent{font-family:"Moon Flower Bold",sans-serif}button>a{text-decoration:none}.half{width:50%}.third{width:calc(100% / 3)}.two-thirds{width:calc(100% / 3 * 2)}.quarter{width:25%}.three-quarters{width:75%}.fifth{width:20%}.two-fifths{width:40%}.three-fifths{width:60%}.four-fifths{width:80%}.half,.third,.two-thirds,.quarter,.three-quarters,.fifth,.two-fifths,.three-fifths,.four-fifths{display:inline-block;vertical-align:top;padding:0.5rem}
