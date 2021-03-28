@@ -47,10 +47,15 @@ if ( ! function_exists( 'my_little_montessorian_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		/**
+		 * Register custom nav menus for the website
+		 */
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'my-little-montessorian' ),
+				'header-top-navigation' => esc_html__( 'Header Top Navigation', 'my-little-montessorian' ),
+				'header-navigation-left' => esc_html__( 'Primary Header Navigation', 'my-little-montessorian' ),
+				'header-navigation-right' => esc_html__( 'Primary Header Navigation', 'my-little-montessorian' ),
+				'primary-footer-navigation' => esc_html__( 'Primary Footer Navigation', 'my-little-montessorian' ),
 			)
 		);
 
@@ -140,14 +145,24 @@ add_action( 'widgets_init', 'my_little_montessorian_widgets_init' );
  * Enqueue scripts and styles.
  */
 function my_little_montessorian_scripts() {
-	wp_enqueue_style( 'my-little-montessorian-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'my-little-montessorian-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'default-styles', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'default-styles', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'my-little-montessorian-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	/**
+	 * Include custom styles for the theme
+	 */
+	wp_enqueue_style( 'my-little-montessorian-styles', get_template_directory_uri() . '/my_little_montessorian.css', array(), _S_VERSION );
+	/**
+	 * Include custom scripts for the theme
+	 */
+	wp_enqueue_script( 'my-little-montessorian-general', get_template_directory_uri() . '/js/general.js', array(), _S_VERSION, true);
+
 }
 add_action( 'wp_enqueue_scripts', 'my_little_montessorian_scripts' );
 
@@ -178,3 +193,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Function to add the current page identifier to body class-list so that
+ * styles can target specific pages more effectively.
+ */
+function add_page_identifier_to_body_class() {
+	global $post;
+	if(isset($post)) $classes[] = "{$post->type}-{$post->name}";
+	return $classes;
+}
+
+add_filter( 'body_class', 'add_page_identifier_to_body_class' );
