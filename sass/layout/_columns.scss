@@ -1,0 +1,48 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares general purpose layout styles that can be very easily
+// overwritten without ramping up specificity or editing this file.
+//
+// Do not style elements directly in this file.
+
+.half {
+  width: 50%;
+}
+.third {
+  width: calc(100% / 3);
+}
+.two-thirds {
+  width: calc(100% / 3 * 2);
+}
+.quarter {
+  width: 25%;
+}
+.three-quarters {
+  width: 75%;
+}
+.fifth {
+  width: 20%;
+}
+.two-fifths {
+  width: 40%;
+}
+.three-fifths {
+  width: 60%;
+}
+.four-fifths {
+  width: 80%;
+}
+.half,
+.third,
+.two-thirds,
+.quarter,
+.three-quarters,
+.fifth,
+.two-fifths,
+.three-fifths,
+.four-fifths {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5rem;
+}

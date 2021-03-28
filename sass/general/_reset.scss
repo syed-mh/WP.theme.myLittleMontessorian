@@ -1,0 +1,34 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// Resets default styles
+//
+// Do not style elements directly in this file.
+
+header,
+div,
+span,
+nav {
+  font-size: 0;
+}
+button,
+button:hover,
+button:focus {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: 0;
+}
+input,
+input:hover,
+input:focus,
+select,
+select:hover,
+select:focus,
+textarea,
+textarea:hover,
+textarea:focus {
+  padding: 0;
+  outline: none;
+  border: 0;
+}

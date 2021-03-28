@@ -1,0 +1,80 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares general purpose font styles and overwrites
+// some styles written by _reset.scss
+//
+// Do not style elements directly in this file.
+
+h1 {
+  font-size: $font-size--h1;
+  font-family: $font-family--accent;
+}
+h2 {
+  font-size: $font-size--h2;
+}
+h3 {
+  font-size: $font-size--h3;
+}
+h4 {
+  font-size: $font-size--h4;
+}
+h5 {
+  font-size: $font-size--h5;
+}
+h1,
+h2,
+h3,
+h4,
+input,
+textarea,
+select {
+  line-height: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0.5em 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family--bold;
+}
+h5,
+h6,
+p,
+li,
+a {
+  line-height: 1.5em;
+}
+h6,
+p,
+li,
+a,
+input,
+textarea,
+button,
+select {
+  font-size: $font-size--p;
+  font-family: $font-family--regular;
+}
+.typography--regular {
+  font-family: $font-family--bold;
+}
+.typography--regular {
+  font-family: $font-family--regular;
+}
+.typography--accent {
+  font-family: $font-family--accent;
+}
+button > a {
+  text-decoration: none;
+}

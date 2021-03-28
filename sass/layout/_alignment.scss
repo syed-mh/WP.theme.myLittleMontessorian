@@ -1,0 +1,19 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// General purpose alignment styles
+//
+// Do not style elements directly in this file.
+
+* .center--forced,
+.center {
+  text-align: center;
+}
+* .right--forced,
+.right {
+  text-align: right;
+}
+* .left--forced,
+.left {
+  text-align: left;
+}
