@@ -5,3 +5,42 @@
 // component of the site
 //
 // Do not style elements directly in this file.
+
+.site-footer {
+  padding: 4rem 0;
+  &__top {
+    text-align: center;
+    &__logo-container {
+      img {
+        max-width: 10rem;
+      }
+    }
+    &__footer-navigation {
+      #primary-footer-navigation {
+        margin: 0;
+        text-align: center;
+        padding: 4rem 0;
+      }
+      .menu-item {
+        list-style: none;
+        margin: 0;
+        display: inline-block;
+        padding: 0 1.75rem;
+      }
+      a {
+        text-decoration: none;
+        transition: color $transition;
+        text-transform: uppercase;
+        &:visited {
+          color: inherit;
+        }
+        &:hover {
+          color: $color-four--100;
+        }
+      }
+    }
+  }
+  &__copyrights {
+    text-align: center;
+  }
+}

@@ -11,3 +11,10 @@ $gradient--two: linear-gradient(-120deg, $color-one--100, $color-two--80);
 $gradient--three: linear-gradient(45deg, $color-five--100, $color-six--60);
 $gradient--four: linear-gradient(-120deg, $color-three--100, $color-five--60);
 $gradient--five: linear-gradient(-120deg, $color-four--90, $color-four--60);
+$gradient--dark-half: linear-gradient(
+  90deg,
+  #302e2e,
+  rgba(#302e2e, 0.75),
+  transparent,
+  transparent
+);

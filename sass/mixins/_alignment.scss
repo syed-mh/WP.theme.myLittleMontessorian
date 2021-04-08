@@ -1,0 +1,12 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares mixins relevant to alignment across
+// the site.
+//
+// Do not style elements directly in this file.
+
+@mixin center-vertically() {
+  align-items: center;
+  flex-direction: row;
+}

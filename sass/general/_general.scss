@@ -1,0 +1,16 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares general purpose styles
+// used across the site
+//
+// Do not style elements directly in this file.
+
+.rounded {
+  border-radius: $border-radius;
+  overflow: hidden;
+  &--full {
+    border-radius: $border-radius--full;
+    overflow: hidden;
+  }
+}

@@ -7,25 +7,34 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package My_Little_Montessorian
+ * @author Syed Mohammed Hassan <contactsyedmh@gmail.com>
+ * @since 1.0
  */
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'my-little-montessorian' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'my-little-montessorian' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'my-little-montessorian' ), 'my-little-montessorian', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="site-footer" class="site-footer">
+		<div class="site-footer__top">
+			<div class="site-footer__top__logo-container">
+				<?php the_custom_logo(); ?>
+			</div>
+		</div><!-- .footer-top -->
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary-footer-navigation',
+				'menu_id'        => 'primary-footer-navigation',
+				'container_class'		 => 'site-footer__top__footer-navigation',
+				'container'			 => 'nav'
+				)
+			);
+		?>
+		<div class="site-footer__footer-bottom">
+		</div><!-- .footer-bottom -->
+		<div class="site-footer__copyrights">
+			<p>Copyrights © <?php echo get_bloginfo() ?> <?php echo date('Y'); ?></p> 
+		</div>
+	</footer><!-- #site-footer -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

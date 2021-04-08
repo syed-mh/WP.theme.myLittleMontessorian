@@ -53,8 +53,8 @@ if ( ! function_exists( 'my_little_montessorian_setup' ) ) :
 		register_nav_menus(
 			array(
 				'header-top-navigation' => esc_html__( 'Header Top Navigation', 'my-little-montessorian' ),
-				'header-navigation-left' => esc_html__( 'Primary Header Navigation', 'my-little-montessorian' ),
-				'header-navigation-right' => esc_html__( 'Primary Header Navigation', 'my-little-montessorian' ),
+				'header-navigation-left' => esc_html__( 'Primary Header Navigation Left', 'my-little-montessorian' ),
+				'header-navigation-right' => esc_html__( 'Primary Header Navigation Right', 'my-little-montessorian' ),
 				'primary-footer-navigation' => esc_html__( 'Primary Footer Navigation', 'my-little-montessorian' ),
 			)
 		);
@@ -194,13 +194,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Function to add the current page identifier to body class-list so that
- * styles can target specific pages more effectively.
+ * Import custom elementor plugin register function
+ * 
+ * @author Syed Mohammed Hassan <contactsyedmh@gmail.com>
+ * @since 1.0
  */
-function add_page_identifier_to_body_class() {
-	global $post;
-	if(isset($post)) $classes[] = "{$post->type}-{$post->name}";
-	return $classes;
-}
-
-add_filter( 'body_class', 'add_page_identifier_to_body_class' );
+require_once get_template_directory() . '/elementor/Widgets.php';

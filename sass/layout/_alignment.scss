@@ -17,3 +17,11 @@
 .left {
   text-align: left;
 }
+.equal-height {
+  &--inline {
+    display: inline-flex;
+    @include center-vertically();
+  }
+  display: flex;
+  @include center-vertically();
+}

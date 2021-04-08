@@ -1,0 +1,24 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares mixins relevant to pseudo elements
+// the site.
+//
+// Do not style elements directly in this file.
+
+@mixin pseudoStarter {
+  content: "";
+  display: block;
+}
+
+@mixin halfGradientOverlay {
+  @include pseudoStarter();
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  background: $gradient--dark-half;
+}

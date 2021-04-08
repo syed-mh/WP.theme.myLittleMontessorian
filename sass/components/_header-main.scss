@@ -5,3 +5,58 @@
 // component of the site
 //
 // Do not style elements directly in this file.
+
+.header-main {
+  height: 13rem;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: $color-bg-light;
+  .boxed,
+  .inner {
+    height: 100%;
+  }
+  &__widget-container,
+  &__nav-container {
+    vertical-align: top;
+  }
+  &__widget-container {
+    width: 10%;
+  }
+  &__nav-container {
+    font-family: $font-family--accent;
+    width: 80%;
+    ul {
+      margin: 0 (-$font-size--h3);
+      text-align: inherit;
+      display: block;
+      font-family: inherit;
+    }
+    li {
+      display: inline-block;
+      margin: 0;
+      font-family: inherit;
+      &.current_page_item {
+        a {
+          color: $color-four--100;
+        }
+      }
+    }
+    a {
+      font-family: inherit;
+      font-size: $font-size--h3;
+      padding: 0 $font-size--h3;
+      color: $color-one--100;
+      transition: color $transition;
+      &:hover {
+        color: $color-four--100;
+      }
+    }
+  }
+  &__logo-container img {
+    max-height: 8rem;
+    max-width: 100%;
+    width: auto;
+  }
+}
