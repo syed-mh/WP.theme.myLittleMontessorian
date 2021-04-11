@@ -38,6 +38,7 @@ class Widget_Loader {
          require_once (__DIR__ . '/widgets/CTACenter.php');
          require_once (__DIR__ . '/widgets/TextAreaRight.php');
          require_once (__DIR__ . '/widgets/IconCardWithText.php');
+         require_once (__DIR__ . '/widgets/VideoPlayer.php');
      }
 
     /**
@@ -52,6 +53,7 @@ class Widget_Loader {
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CTACenter());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TextAreaRight());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\IconCardWithText());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\VideoPlayer());
     }
 
     /**
