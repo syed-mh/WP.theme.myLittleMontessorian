@@ -51,6 +51,11 @@
   width: 90%;
   position: relative;
   margin: 0 auto;
+  &--narrow {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+  }
 }
 .inner {
   margin: 0 -0.5rem;
