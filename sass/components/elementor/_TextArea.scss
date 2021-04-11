@@ -1,0 +1,42 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares styles for the text area
+// component of the site
+//
+// Do not style elements directly in this file.
+
+.cta {
+  &--right {
+    .cta-image {
+      padding: 0 6rem 0 0;
+    }
+  }
+  &--left {
+    .cta-image {
+      padding: 0 0 0 6rem;
+    }
+  }
+  &--center {
+    padding: 5rem 0;
+    .cta-image {
+      &.left {
+        padding: 0 6rem 0 10rem;
+        object-position: center center;
+        max-height: 45rem;
+      }
+      &.right {
+        padding: 0;
+        object-position: right center;
+      }
+    }
+    .cta-content-container {
+      padding: 0 6rem;
+    }
+  }
+  .cta-image {
+    box-sizing: border-box;
+    object-fit: contain;
+    object-position: left center;
+  }
+}

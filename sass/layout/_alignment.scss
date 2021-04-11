@@ -17,6 +17,16 @@
 .left {
   text-align: left;
 }
+.description {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.pull-top {
+  margin-top: -15rem;
+  &--large {
+    margin-top: -20rem;
+  }
+}
 .equal-height {
   &--inline {
     display: inline-flex;

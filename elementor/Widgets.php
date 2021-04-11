@@ -32,7 +32,11 @@ class Widget_Loader {
      * @return void
      */
     private function include_widget_files() {
-         require_once (__DIR__ . '/HomePageOpener.php');
+         require_once (__DIR__ . '/widgets/HomePageOpener.php');
+         require_once (__DIR__ . '/widgets/Divider.php');
+         require_once (__DIR__ . '/widgets/CTARight.php');
+         require_once (__DIR__ . '/widgets/CTACenter.php');
+         require_once (__DIR__ . '/widgets/TextAreaRight.php');
      }
 
     /**
@@ -42,6 +46,10 @@ class Widget_Loader {
     public function register_widgets() {
         $this->include_widget_files();
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\HomePageOpener());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\Divider());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CTARight());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CTACenter());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TextAreaRight());
     }
 
     /**

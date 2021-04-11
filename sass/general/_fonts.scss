@@ -84,14 +84,16 @@ select {
   font-size: $font-size--p;
   font-family: $font-family--regular;
 }
-.typography--regular {
-  font-family: $font-family--bold;
-}
-.typography--regular {
-  font-family: $font-family--regular;
-}
-.typography--accent {
-  font-family: $font-family--accent;
+.typography {
+  &--regular {
+    font-family: $font-family--regular;
+  }
+  &--bold {
+    font-family: $font-family--bold;
+  }
+  &--accent {
+    font-family: $font-family--accent;
+  }
 }
 button > a {
   text-decoration: none;

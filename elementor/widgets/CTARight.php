@@ -6,21 +6,19 @@
 
 namespace MLM\Widgets;
 
-use Elementor\Widget_Base;
-
 /**
  * Security measure
  */
 if(!defined('ABSPATH')) exit;
 
-class HomePageOpener extends Widget_Base {
+class CTARight extends \Elementor\Widget_Base {
     
     /**
      * Widget Name
      * @return string
      */
     public function get_name() {
-        return 'Home Page Opener';
+        return 'Call To Action Right';
     }
 
     /**
@@ -28,7 +26,7 @@ class HomePageOpener extends Widget_Base {
      * @return string
      */
     public function get_title() {
-        return 'Home Page Opener';
+        return 'Call To Action Right';
     }
 
     /**
@@ -36,7 +34,7 @@ class HomePageOpener extends Widget_Base {
      * @return string
      */
     public function get_icon() {
-        return 'fa fa-image';
+        return 'fa fa-comment-alt';
     }
 
     /**
@@ -44,7 +42,7 @@ class HomePageOpener extends Widget_Base {
      * @return Array<string>
      */
     public function get_categories() {
-        return ['general'];
+        return ['my-little-montessorian'];
     }
 
     /**
@@ -61,27 +59,27 @@ class HomePageOpener extends Widget_Base {
         );
 
         $this->add_control(
-            'banner_title',
+            'section_title',
             [
-                'label'     => 'Banner Title',
+                'label'     => 'Section Title',
                 'type'      => \Elementor\Controls_Manager::TEXT,
-                'default'   => 'Banner Title'
+                'default'   => 'Section Title'
             ]
         );
 
         $this->add_control(
-            'banner_description',
+            'section_description',
             [
-                'label'     => 'Banner Description',
+                'label'     => 'Section Description',
                 'type'      => \Elementor\Controls_Manager::WYSIWYG,
                 'default'   => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quos at reprehenderit sed quia. Assumenda ducimus aliquam temporibus odit quaerat rem dolorem, quasi cupiditate deleniti dolorum, eaque voluptates accusamus! Incidunt minima voluptatibus laborum optio, quod sint consectetur sunt voluptas sapiente, error neque! Fugiat eligendi est similique sit ipsam officia exercitationem.'
             ]
         );
         
         $this->add_control(
-          'banner_image',
+          'section_image',
           [
-            'label'     => 'Banner Image',
+            'label'     => 'Section Image',
             'type'      => \Elementor\Controls_Manager::MEDIA,
             'default'   => ['url' => \Elementor\Utils::get_placeholder_image_src()]
             ]
@@ -118,28 +116,29 @@ class HomePageOpener extends Widget_Base {
     protected function render() {
 
         $settings = $this->get_settings_for_display();
-        $this->add_inline_editing_attributes('banner_title', 'basic');
-        $this->add_inline_editing_attributes('banner_description', 'basic');
+        $this->add_inline_editing_attributes('section_title', 'basic');
+        $this->add_inline_editing_attributes('section_description', 'basic');
         
         $this->add_render_attribute(
-            'banner_title',
+            'section_title',
             [
-                'class' => ['home-page-opener__title']
+                'class' => ['cta__title', 'title', 'cta-title', 'typography--accent']
             ]
         );
 
         $this->add_render_attribute(
-            'banner_description',
+            'section_description',
             [
-                'class' => ['home-page-opener__description']
+                'class' => ['cta__description', 'cta-description', 'description']
             ]
         );
 
         $this->add_render_attribute(
-            'banner_image',
+            'section_image',
             [
-                'class' => ['home-page-opener__container', 'rounded'],
-                'style' => ["background-image: url({$settings['banner_image']['url']})"]
+                'class' => ['cta__image', 'half', 'cta-image', 'shadow-filter'],
+                'src' => $settings['section_image']['url'],
+                'alt' => $settings['section_title']
             ]
         );
 
@@ -152,23 +151,22 @@ class HomePageOpener extends Widget_Base {
         
         ?>
 
-        <section class="home-page-opener boxed">
-          <div <?php echo $this->get_render_attribute_string('banner_image'); ?> >
-            <div class="third home-page-opener__content-container">
-              <h1 <?php echo $this->get_render_attribute_string('banner_title') ?> >
-                <?php echo $settings['banner_title'] ?>
-              </h1>
-              <p <?php echo $this->get_render_attribute_string('banner_description') ?> >
-                <?php echo $settings['banner_description'] ?>
+        <section class="cta cta--right equal-height pull-top--large">
+            <img <?php echo $this->get_render_attribute_string('section_image') ?> />
+            <div class='cta__content-container third cta-content-container'>
+              <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
+                <?php echo $settings['section_title'] ?>
+              </h2>
+              <p <?php echo $this->get_render_attribute_string('section_description') ?> >
+                <?php echo $settings['section_description'] ?>
               </p>
-              <button class="theme-button no-fill--light home-page-opener__button" alt="<?php echo $settings['banner_title'] ?>">
-                <a href=<?php echo $settings['button_link']['url'] ?> >
+              <button class="theme-button no-fill--dark home-page-opener__button">
+                <a href=<?php echo $settings['button_link']['url'] ?> alt=<?php echo $settings['section_title'] ?> >
                   <?php echo $settings['button_text'] ?>
                 </a>
               </button>
-            </div> <!-- .home-page-opener__content-container -->
-          </div> <!-- .home-page-opener__container -->
-        </section> <!-- .home-page-opener -->
+            </div> <!-- .cta__content-container -->
+        </section> <!-- .cta -->
 
         <?php
 
@@ -182,51 +180,58 @@ class HomePageOpener extends Widget_Base {
         ?>
 
         <#
+
+        view.addInlineEditingAttributes('section_title', 'basic');
+        view.addInlineEditingAttributes('section_description', 'basic');
         
-        view.addInlineEditingAttributes('banner_title', 'basic')
-        view.addInlineEditingAttributes('banner_description', 'basic')
+        view.addRenderAttribute(
+            'section_title',
+            {
+                'class': ['cta__title', 'title', 'cta-title', 'typography--accent']
+            }
+        );
 
         view.addRenderAttribute(
-            'banner_title',
+            'section_description',
             {
-                'class': ['home-page-opener__title']
+                'class': ['cta__description', 'cta-description', 'description']
             }
-        )
+        );
 
         view.addRenderAttribute(
-            'banner_description',
+            'section_image',
             {
-                'class': ['home-page-opener__description']
+                'class': ['cta__image', 'half', 'cta-image', 'shadow-filter'],
+                'src': settings.section_image.url,
+                'alt': settings.section_title
             }
-        )
+        );
 
         view.addRenderAttribute(
-            'banner_image',
-            {
-                'class': ['home-page-opener__container', 'rounded'],
-                'style': ["background-image: url({$settings['banner_image']['url']})"]
-            }
+          'button_link',
+          {
+            'href': settings.button_link.url
+          }
         )
-
+        
         #>
 
-        <section class="home-page-opener boxed">
-          <div {{{ view.getRenderAttributeString('banner_image') }}} >
-            <div class="quarter home-page-opener__content-container">
-              <h1 {{{ view.getRenderAttributeString('banner_title') }}} >
-                {{{ settings.banner_title }}}
-              </h1>
-              <p {{{ view.getRenderAttributeString('banner_description') }}} >
-                {{{ settings.banner_description }}}
+        <section class="cta cta--right equal-height pull-top--large">
+            <img {{{ view.getRenderAttributeString('section_image') }}} />
+            <div class='cta__content-container third cta-content-container'>
+              <h2 {{{ view.getRenderAttributeString('section_title') }}} >
+                {{{ settings.section.title }}}
+              </h2>
+              <p {{{ view.getRenderAttributeString('section_description') }}} >
+                {{{ settings.section_description }}}
               </p>
-              <button class="theme-button theme-button--no-fill--light home-page-opener__button" alt={{{ settings.banner_title }}}>
-                <a href={{{ settings.button_link.url }}}>
+              <button class="theme-button no-fill--dark home-page-opener__button">
+                <a href={{{ settings.button_link.url }}} alt={{{ settings.section_title }}} >
                   {{{ settings.button_text }}}
                 </a>
               </button>
-            </div> <!-- .home-page-opener__content-container -->
-          </div> <!-- .home-page-opener__container -->
-        </section> <!-- .home-page-opener -->
+            </div> <!-- .cta__content-container -->
+        </section> <!-- .cta -->
 
         <?php
 

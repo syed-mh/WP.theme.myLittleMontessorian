@@ -8,8 +8,14 @@
 //
 // Do not style elements directly in this file.
 
+// Theme components
+
 @import "./buttons";
 @import "./footer";
 @import "./header-top";
 @import "./header-main";
-@import "./HomePageOpener";
+@import "./page-opener";
+
+// Elementor Widgets
+
+@import "./elementor/";

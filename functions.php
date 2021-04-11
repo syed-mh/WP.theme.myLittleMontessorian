@@ -48,6 +48,14 @@ if ( ! function_exists( 'my_little_montessorian_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		/**
+		 * Enable support for Woocommerce
+		 * 
+		 * @author Syed Mohammed Hassan <contactsyedmh@gmail.com>
+		 * 
+		 */
+		add_theme_support( 'woocommerce' );
+
+		/**
 		 * Register custom nav menus for the website
 		 */
 		register_nav_menus(
@@ -138,6 +146,14 @@ function my_little_montessorian_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'				=> esc_html__('Sitewide Notice', 'my-little-montessorian'),
+			'id'					=> 'sitewide-notice',
+			'description'	=> esc_html__('Add a sitewide notice here', 'my-little-montessorian')
+		)
+		);
 }
 add_action( 'widgets_init', 'my_little_montessorian_widgets_init' );
 
@@ -200,3 +216,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * @since 1.0
  */
 require_once get_template_directory() . '/elementor/Widgets.php';
+
+/**
+ * Import custom elementor widget categories
+ * 
+ * @author Syed Mohammed Hassan <contactsyedmh@gmail.com
+ * @since 1.0
+ */
+
+require_once get_template_directory() . '/elementor/Categories.php';
+
+/**
+ * Add the custom elementor categories function to the Elementor loop
+ */
+add_action('elementor/elements/categories_registered', 'mlm_elementor_categories');

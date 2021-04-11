@@ -39,3 +39,12 @@ textarea:focus {
   outline: none;
   border: 0;
 }
+
+// Reset elementor styles
+div.elementor-column-gap-default {
+  & > .elementor-column {
+    & > .elementor-element-populated {
+      padding: 0;
+    }
+  }
+}

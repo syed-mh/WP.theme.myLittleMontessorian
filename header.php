@@ -28,8 +28,27 @@
 		<div class="boxed">
 			<div class="inner equal-height">
 				<div class="half left">
+					<?php
+						if(is_active_sidebar('sitewide-notice')):
+							dynamic_sidebar('sitewide-notice');
+						endif;
+					?>
 				</div>
 				<div class="half right">
+					<ul class='header-top__menu'>
+						<li class="header-top__menu-item equal-height--inline">
+							<img src="<?php echo get_template_directory_uri() . '/assets/icons/my-little-montessorian-contact-icon.svg' ?>" alt="">
+							<a class='typography--accent' href=<?php echo get_bloginfo('url') . "/contact" ?> >Contact</a>
+						</li>
+						<li class="header-top__menu-item equal-height--inline">
+							<img src="<?php echo get_template_directory_uri() . '/assets/icons/my-little-montessorian-login-icon.svg' ?>" alt="">
+							<a class='typography--accent' href="<?php echo get_bloginfo('url') . "/login" ?>">Login/Register</a>
+						</li>
+						<li class="header-top__menu-item equal-height--inline">
+							<img src="<?php echo get_template_directory_uri() . '/assets/icons/my-little-montessorian-cart-icon.svg' ?>" alt="">
+							<a class='typography--accent' href=<?php echo get_bloginfo('url') . "/cart" ?>>Cart</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -64,6 +83,9 @@
 						?>
 				</span> <!-- .nav-container -->
 				<span class="header-main__widget-container right">
+					<button class="theme-button pill rounded--full typography--accent">
+						<a href="#" alt='Subscribe' class='no-click'>Subscribe</a>
+					</button>
 				</span> <!-- .widget-container -->
 		</div><!-- .boxed -->
 	</header><!-- #header-main -->

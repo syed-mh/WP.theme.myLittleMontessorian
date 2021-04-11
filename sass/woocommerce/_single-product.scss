@@ -1,0 +1,114 @@
+.woocommerce {
+  h1 {
+    font-size: $font-size--h1-l;
+  }
+  &-breadcrumb {
+    display: none;
+  }
+  div.product {
+    h1 {
+      margin: 0 0 2rem;
+    }
+    .opener {
+      margin: 0 -3rem 5rem;
+    }
+    span.onsale {
+      font-size: $font-size--h4;
+      line-height: 1em;
+      top: 1rem;
+      left: 1rem;
+      background-color: rgba($color-five--100, 0.9);
+      color: $color-one--100;
+      min-width: unset;
+      min-height: unset;
+      padding: 0.7rem 2rem 1rem;
+      border-radius: $border-radius;
+    }
+    div.images,
+    div.summary {
+      vertical-align: top;
+      float: none;
+      width: 50%;
+      display: inline-block;
+      padding: 0 3rem;
+    }
+    div.images {
+      figure.woocommerce-product-gallery__wrapper {
+        margin: 0 -2rem;
+        display: flex;
+      }
+      .woocommerce-product-gallery__image {
+        width: 25%;
+        display: inline-block;
+      }
+      img {
+        border-radius: $border-radius;
+        padding: 2rem;
+        object-fit: contain;
+        height: 100%;
+        &.wp-post-image {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    div.summary {
+      padding-top: 2rem;
+      position: sticky;
+      top: 12rem;
+      p {
+        margin: 0 0 2rem;
+        font-size: $font-size--p;
+        &.stock {
+          &.in-stock {
+            color: $color-two--100;
+          }
+          &.out-of-stock {
+            color: $color-four--100;
+          }
+        }
+        &.price {
+          font-size: $font-size--h4;
+          span,
+          del,
+          bdi,
+          ins {
+            font-size: inherit;
+          }
+        }
+      }
+    }
+    form.cart {
+      div.quantity {
+        float: none;
+        margin: 0 0 2rem;
+        .qty {
+          padding: 1rem;
+          border: 0.2rem $color-two--100 solid;
+          outline: none;
+          &:hover {
+            padding: 1rem;
+          }
+        }
+      }
+      .add-to-cart-button-container {
+        margin-bottom: 3rem;
+      }
+    }
+    div.product_meta {
+      span {
+        font-size: $font-size--p;
+        &.sku_wrapper,
+        &.posted_in {
+          display: block;
+        }
+      }
+    }
+    .woocommerce-tabs {
+      width: 75%;
+      margin: 0 auto;
+      .panel {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
