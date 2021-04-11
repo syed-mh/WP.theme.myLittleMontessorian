@@ -152,7 +152,7 @@ class VideoPlayer extends \Elementor\Widget_Base {
         $this->add_render_attribute(
             'video_link',
             [
-                'class' => 'no-link',
+                'class' => 'no-click',
                 'href' => $settings['video_link']['url'],
                 'alt' => 'Play Video'
             ]
@@ -160,29 +160,29 @@ class VideoPlayer extends \Elementor\Widget_Base {
         
         ?>
 
-          <section class='video-player-container video-player'>
-            <img <?php echo $this->get_render_attribute_string('section_background') ?> >
-            <div class="video-player__inner boxed">
-              <div class="video-player__content quarter">
-                <h2 <?php echo $this->get_render_attribute_string('section_title') ?>>
-                  <?php echo $settings['section_title'] ?>
-                </h2>
-                <p <?php echo $this->get_render_attribute_string('section_description') ?> >
-                  <?php echo $settings['section_description'] ?>
-                </p>
-                <div class="video-player__icon-container">
-                  <a <?php echo $this->get_render_attribute_string('video_link') ?> >
-                    <img <?php echo $this->get_render_attribute_string('video_icon') ?> >
-                  </a>
-                </div>
-                <button class="theme-button no-fill--light home-page-opener__button">
-                  <a <?php echo $this->get_render_attribute_string('video_link') ?> >
-                    Play Video
-                  </a>
-                </button>
+        <section class='video-player-container video-player'>
+          <img <?php echo $this->get_render_attribute_string('section_background') ?> >
+          <div class="video-player__inner boxed">
+            <div class="video-player__content quarter">
+              <h2 <?php echo $this->get_render_attribute_string('section_title') ?>>
+                <?php echo $settings['section_title'] ?>
+              </h2>
+              <p <?php echo $this->get_render_attribute_string('section_description') ?> >
+                <?php echo $settings['section_description'] ?>
+              </p>
+              <div class="video-player__icon-container">
+                <a <?php echo $this->get_render_attribute_string('video_link') ?> >
+                  <img <?php echo $this->get_render_attribute_string('video_icon') ?> >
+                </a>
               </div>
-            </div>
-          </section>
+              <button class="theme-button no-fill--light home-page-opener__button">
+                <a <?php echo $this->get_render_attribute_string('video_link') ?> >
+                  Play Video
+                </a>
+              </button>
+            </div> <!-- .video-player__content -->
+          </div> <!-- .video-player__inner -->
+        </section> <!-- .video-player -->
 
         <?php
 
@@ -197,158 +197,75 @@ class VideoPlayer extends \Elementor\Widget_Base {
 
         <#
 
-        view.addInlineEditingAttributes('card_one_title', 'basic');
-        view.addInlineEditingAttributes('card_one_description', 'basic');
-
-        view.addInlineEditingAttributes('card_two_title', 'basic');
-        view.addInlineEditingAttributes('card_two_description', 'basic');
-
-        view.addInlineEditingAttributes('card_three_title', 'basic');
-        view.addInlineEditingAttributes('card_three_description', 'basic');
-
-        view.addInlineEditingAttributes('card_four_title', 'basic');
-        view.addInlineEditingAttributes('card_four_description', 'basic');
+        view.addInlineEditingAttributes('section_title', 'basic');
+        view.addInlineEditingAttributes('section_description', 'basic');
         
         view.addRenderAttribute(
-            'card_one_title',
+            'section_title',
             {
-                'class': ['card__title', 'title', 'card-title', 'typography--accent']
+                'class': ['video-player__title', 'title', 'video-player-title', 'typography--accent']
             }
         );
 
         view.addRenderAttribute(
-            'card_one_description',
+            'section_description',
             {
-                'class': ['card__description', 'card-description', 'description']
+                'class': ['video-player-description', 'video-player__description', 'description']
             }
         );
 
         view.addRenderAttribute(
-            'card_one_image',
+            'section_background',
             {
-                'class': ['card__image', 'half', 'card-image', 'shadow-filter'],
-                'src': settings.card_one_image.url,
-                'alt': settings.card_one_title
+                'class': ['video-player-background', 'video-player__background', 'masked'],
+                'src': settings.section_background.url
+                'alt': settings.section_title
             }
         );
 
         view.addRenderAttribute(
-            'card_two_title',
+            'video_icon',
             {
-                'class': ['card__title', 'title', 'card-title', 'typography--accent']
+                'class': ['video-player-icon', 'video-player__icon'],
+                'src': settings.video_icon.url,
+                'alt': 'Play Video Icon'
             }
         );
 
         view.addRenderAttribute(
-            'card_two_description',
+            'video_link',
             {
-                'class': ['card__description', 'card-description', 'description']
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_two_image',
-            {
-                'class': ['card__image', 'half', 'card-image', 'shadow-filter'],
-                'src': settings.card_two_image.url,
-                'alt': settings.card_two_title
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_three_title',
-            {
-                'class': ['card__title', 'title', 'card-title', 'typography--accent']
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_three_description',
-            {
-                'class': ['card__description', 'card-description', 'description']
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_three_image',
-            {
-                'class': ['card__image', 'half', 'card-image', 'shadow-filter'],
-                'src': settings.card_three_image.url,
-                'alt': settings.card_three_title
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_four_title',
-            {
-                'class': ['card__title', 'title', 'card-title', 'typography--accent']
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_four_description',
-            {
-                'class': ['card__description', 'card-description', 'description']
-            }
-        );
-
-        view.addRenderAttribute(
-            'card_four_image',
-            {
-                'class': ['card__image', 'half', 'card-image', 'shadow-filter'],
-                'src': settings.card_four_image.url,
-                'alt': settings.card_four_title
+                'class': 'no-click',
+                'href': settings.video_link.url,
+                'alt': 'Play Video'
             }
         );
 
         #>
 
-        <section class="icon-with-text-container card-container equal-height boxed">
-            <article class="card quarter">
-                <div class="card__inner">
-                    <img {{{ view.getRenderAttributeString('card_one_image') }}} >
-                    <h3 {{{ getRenderAttributeString('card_one_title') }}} >
-                        {{{ settings.card_one_title }}}
-                    </h3>
-                    <p {{{ view.getRenderAttributeString('card_one_description') }}} >
-                        {{{ settings.card_one_description }}}
-                    </p>
+        <section class='video-player-container video-player'>
+            <img {{{ view.getRenderAttributeString('section_background') }}} >
+            <div class="video-player__inner boxed">
+              <div class="video-player__content quarter">
+                <h2 {{{ view.getRenderAttributeString('section_title') }}}>
+                  {{{ settings.section_title }}}
+                </h2>
+                <p {{{ view.getRenderAttributeString('section_description') }}} >
+                  {{{ settings.section_description }}}
+                </p>
+                <div class="video-player__icon-container">
+                  <a {{{ view.getRenderAttributeString('video_link') }}} >
+                    <img {{{ view.getRenderAttributeString('video_link') }}} >
+                  </a>
                 </div>
-            </article> <!-- .card -->
-            <article class="card quarter">
-                <div class="card__inner">
-                    <img {{{ view.getRenderAttributeString('card_two_image') }}} >
-                    <h3 {{{ getRenderAttributeString('card_two_title') }}} >
-                        {{{ settings.card_two_title }}}
-                    </h3>
-                    <p {{{ view.getRenderAttributeString('card_two_description') }}} >
-                        {{{ settings.card_two_description }}}
-                    </p>
-                </div>
-            </article> <!-- .card -->
-            <article class="card quarter">
-                <div class="card__inner">
-                    <img {{{ view.getRenderAttributeString('card_three_image') }}} >
-                    <h3 {{{ getRenderAttributeString('card_three_title') }}} >
-                        {{{ settings.card_three_title }}}
-                    </h3>
-                    <p {{{ view.getRenderAttributeString('card_three_description') }}} >
-                        {{{ settings.card_three_description }}}
-                    </p>
-                </div>
-            </article> <!-- .card -->
-            <article class="card quarter">
-                <div class="card__inner">
-                    <img {{{ view.getRenderAttributeString('card_four_image') }}} >
-                    <h3 {{{ getRenderAttributeString('card_four_title') }}} >
-                        {{{ settings.card_four_title }}}
-                    </h3>
-                    <p {{{ view.getRenderAttributeString('card_four_description') }}} >
-                        {{{ settings.card_four_description }}}
-                    </p>
-                </div>
-            </article> <!-- .card -->
-        </section> <!-- .card-container -->
+                <button class="theme-button no-fill--light home-page-opener__button">
+                  <a {{{ view.getRenderAttributeString('video_link') }}} >
+                    Play Video
+                  </a>
+                </button>
+              </div> <!-- .video-player__content -->
+            </div> <!-- .video-player__inner -->
+          </section> <!-- .video-player -->
 
         <?php
 
