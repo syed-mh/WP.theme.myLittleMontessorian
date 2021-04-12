@@ -1,0 +1,44 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares styles for the montessori stages
+// component of the site
+
+.montessori-steps {
+  &__inner {
+    margin: 0 -5rem;
+    align-items: flex-start;
+  }
+  &__about {
+    position: sticky;
+    top: 12rem;
+  }
+  &__content {
+    margin: -2rem 0;
+  }
+  &__about,
+  &__content {
+    padding: 0 5rem;
+  }
+  .montessori-step {
+    padding: 0 4rem;
+    background: $color-five--60;
+    margin: 2rem 0;
+    &__number {
+      width: 10%;
+      display: inline-flex;
+      place-items: center;
+      font-size: 12.5rem;
+    }
+    &__content {
+      width: 90%;
+    }
+    &__content,
+    &__number {
+      display: inline-block;
+    }
+    &__title {
+      font-size: $font-size--h2;
+    }
+  }
+}
