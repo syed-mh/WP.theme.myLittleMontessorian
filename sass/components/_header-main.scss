@@ -3,8 +3,6 @@
 //
 // This file declares styles for the main header
 // component of the site
-//
-// Do not style elements directly in this file.
 
 .header-main {
   height: 13rem;
@@ -27,6 +25,7 @@
   &__nav-container {
     font-family: $font-family--accent;
     width: 80%;
+    place-content: center;
     ul {
       margin: 0 (-$font-size--h3);
       text-align: inherit;
