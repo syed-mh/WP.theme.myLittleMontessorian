@@ -49,13 +49,22 @@
     mask-position: center center;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    padding: 2rem calc(100% / 12);
+    padding: 0 calc(100% / 12);
     box-sizing: border-box;
     .text-area-content-container {
       padding-right: calc(100% / 10);
     }
+    .text-area__image-container {
+      padding: 0;
+    }
     .text-area-image {
-      padding: 0 0 0 6rem;
+      padding: 0;
+      -webkit-mask-image: url("./assets/masks/my-little-montessorian-about-page-matte.png");
+      mask-image: url("./assets/masks/my-little-montessorian-about-apge-matte.png");
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      -webkit-mask-position: left center;
+      mask-position: left center;
     }
   }
   &--center {
