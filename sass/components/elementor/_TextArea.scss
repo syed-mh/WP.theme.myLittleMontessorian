@@ -8,6 +8,12 @@
   &--right {
     .cta-image {
       padding: 0 6rem 0 0;
+      -webkit-mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
+      mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
+      -webkit-mask-size: calc(100% - 6rem + 1px) 100%;
+      mask-size: 100% 100%;
+      -webkit-mask-position: left center;
+      mask-position: left center;
     }
   }
   &--left {
@@ -36,5 +42,8 @@
     box-sizing: border-box;
     object-fit: contain;
     object-position: left center;
+  }
+  &__description {
+    font-size: 1.8rem;
   }
 }

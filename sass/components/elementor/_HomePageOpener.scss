@@ -34,6 +34,13 @@
   }
   &__description {
     color: $color-bg-light;
+    font-size: 1.8rem;
     margin: 1.5em 0;
+    p,
+    li,
+    span,
+    a {
+      color: inherit;
+    }
   }
 }
