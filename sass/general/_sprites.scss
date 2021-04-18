@@ -1,0 +1,37 @@
+// @author: Syed Mohammed Hassan <contactsyedmh@gmail.com>
+// @since: 1.0
+//
+// This file declares sprite related styles
+// used across the site
+
+img.sprite {
+  &--pebble {
+    &.large,
+    &.medium,
+    &.small {
+      position: absolute;
+      object-fit: contain;
+      object-position: center center;
+    }
+    &.large {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    &.medium {
+      bottom: 50%;
+      left: 22%;
+      width: 5rem;
+      height: 5rem;
+      z-index: 3;
+    }
+    &.small {
+      bottom: 25%;
+      left: 30%;
+      height: 3rem;
+      width: 3rem;
+      z-index: 3;
+    }
+  }
+}
