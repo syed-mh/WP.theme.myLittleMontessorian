@@ -12,6 +12,8 @@
  * @package My_Little_Montessorian
  */
 
+if(!defined('ABSPATH')) exit;
+
 get_header();
 ?>
 
