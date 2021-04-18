@@ -156,9 +156,9 @@ class HomePageOpener extends \Elementor\Widget_Base {
               <h1 <?php echo $this->get_render_attribute_string('banner_title') ?> >
                 <?php echo $settings['banner_title'] ?>
               </h1>
-              <p <?php echo $this->get_render_attribute_string('banner_description') ?> >
+              <div <?php echo $this->get_render_attribute_string('banner_description') ?> >
                 <?php echo $settings['banner_description'] ?>
-              </p>
+              </div>
               <button class="theme-button no-fill--light home-page-opener__button">
                 <a href=<?php echo $settings['button_link']['url'] ?> alt=<?php echo $settings['banner_title'] ?> >
                   <?php echo $settings['button_text'] ?>
@@ -214,9 +214,9 @@ class HomePageOpener extends \Elementor\Widget_Base {
               <h1 {{{ view.getRenderAttributeString('banner_title') }}} >
                 {{{ settings.banner_title }}}
               </h1>
-              <p {{{ view.getRenderAttributeString('banner_description') }}} >
+              <div {{{ view.getRenderAttributeString('banner_description') }}} >
                 {{{ settings.banner_description }}}
-              </p>
+              </div>
               <button class="theme-button theme-button--no-fill--light home-page-opener__button">
                 <a href={{{ settings.button_link.url }}} alt={{{ settings.banner_title }}}>
                   {{{ settings.button_text }}}

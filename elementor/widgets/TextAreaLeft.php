@@ -11,14 +11,14 @@ namespace MLM\Widgets;
  */
 if(!defined('ABSPATH')) exit;
 
-class TextAreaRight extends \Elementor\Widget_Base {
+class TextAreaLeft extends \Elementor\Widget_Base {
     
     /**
      * Widget Name
      * @return string
      */
     public function get_name() {
-        return 'Text Area Right';
+        return 'Text Area Left';
     }
 
     /**
@@ -26,7 +26,7 @@ class TextAreaRight extends \Elementor\Widget_Base {
      * @return string
      */
     public function get_title() {
-        return 'Text Area Right';
+        return 'Text Area Left';
     }
 
     /**
@@ -108,14 +108,14 @@ class TextAreaRight extends \Elementor\Widget_Base {
         $this->add_render_attribute(
             'section_description',
             [
-                'class' => ['cta__description', 'cta-description', 'description']
+                'class' => ['cta__description', 'cta-description', 'description', 'typography--regular']
             ]
         );
 
         $this->add_render_attribute(
             'section_image',
             [
-                'class' => ['cta__image', 'half', 'cta-image'],
+                'class' => ['cta__image', 'cta-image'],
                 'src' => $settings['section_image']['url'],
                 'alt' => $settings['section_title']
             ]
@@ -123,9 +123,8 @@ class TextAreaRight extends \Elementor\Widget_Base {
         
         ?>
 
-        <section class="cta cta--right equal-height">
-            <img <?php echo $this->get_render_attribute_string('section_image') ?> />
-            <div class='cta__content-container third cta-content-container'>
+        <section class="cta cta--left equal-height boxed">
+            <div class='cta__content-container two-thirds cta-content-container'>
               <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
                 <?php echo $settings['section_title'] ?>
               </h2>
@@ -133,6 +132,9 @@ class TextAreaRight extends \Elementor\Widget_Base {
                 <?php echo $settings['section_description'] ?>
               </div>
             </div> <!-- .cta__content-container -->
+            <div class="cta__image-container third">
+              <img <?php echo $this->get_render_attribute_string('section_image') ?> />
+            </div>
         </section> <!-- .cta -->
 
         <?php
@@ -161,14 +163,14 @@ class TextAreaRight extends \Elementor\Widget_Base {
         view.addRenderAttribute(
             'section_description',
             {
-                'class': ['cta__description', 'cta-description', 'description']
+                'class': ['cta__description', 'cta-description', 'description', 'typography--regular']
             }
         );
 
         view.addRenderAttribute(
             'section_image',
             {
-                'class': ['cta__image', 'half', 'cta-image'],
+                'class': ['cta__image', 'half', 'cta-image', 'shadow-filter'],
                 'src': settings.section_image.url,
                 'alt': settings.section_title
             }

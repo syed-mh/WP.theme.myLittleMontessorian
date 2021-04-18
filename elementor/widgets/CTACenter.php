@@ -129,7 +129,7 @@ class CTACenter extends \Elementor\Widget_Base {
         $this->add_render_attribute(
             'section_image_left',
             [
-                'class' => ['cta__image--left', 'third', 'cta-image', 'cta-image', 'left', 'shadow-filter'],
+                'class' => ['cta__image--left', 'third', 'cta-image', 'cta-image', 'left'],
                 'src' => $settings['section_image_left']['url'],
                 'alt' => $settings['section_title']
             ]

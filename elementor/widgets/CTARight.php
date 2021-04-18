@@ -129,14 +129,14 @@ class CTARight extends \Elementor\Widget_Base {
         $this->add_render_attribute(
             'section_description',
             [
-                'class' => ['cta__description', 'cta-description', 'description']
+                'class' => ['cta__description', 'cta-description', 'description', 'typography--regular']
             ]
         );
 
         $this->add_render_attribute(
             'section_image',
             [
-                'class' => ['cta__image', 'half', 'cta-image', 'shadow-filter'],
+                'class' => ['cta__image', 'half', 'cta-image'],
                 'src' => $settings['section_image']['url'],
                 'alt' => $settings['section_title']
             ]
@@ -157,9 +157,9 @@ class CTARight extends \Elementor\Widget_Base {
               <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
                 <?php echo $settings['section_title'] ?>
               </h2>
-              <p <?php echo $this->get_render_attribute_string('section_description') ?> >
+              <div <?php echo $this->get_render_attribute_string('section_description') ?> >
                 <?php echo $settings['section_description'] ?>
-              </p>
+              </div>
               <button class="theme-button no-fill--dark home-page-opener__button">
                 <a href=<?php echo $settings['button_link']['url'] ?> alt=<?php echo $settings['section_title'] ?> >
                   <?php echo $settings['button_text'] ?>
@@ -194,7 +194,7 @@ class CTARight extends \Elementor\Widget_Base {
         view.addRenderAttribute(
             'section_description',
             {
-                'class': ['cta__description', 'cta-description', 'description']
+                'class': ['cta__description', 'cta-description', 'description', 'typography--regular']
             }
         );
 
@@ -222,9 +222,9 @@ class CTARight extends \Elementor\Widget_Base {
               <h2 {{{ view.getRenderAttributeString('section_title') }}} >
                 {{{ settings.section.title }}}
               </h2>
-              <p {{{ view.getRenderAttributeString('section_description') }}} >
+              <div {{{ view.getRenderAttributeString('section_description') }}} >
                 {{{ settings.section_description }}}
-              </p>
+              </div>
               <button class="theme-button no-fill--dark home-page-opener__button">
                 <a href={{{ settings.button_link.url }}} alt={{{ settings.section_title }}} >
                   {{{ settings.button_text }}}
