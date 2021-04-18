@@ -123,19 +123,23 @@ class TextAreaRightAlt extends \Elementor\Widget_Base {
         
         ?>
 
-        <section class="text-area text-area--right equal-height alternate">
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-large.svg" ?>" class="shadow-filter sprite--pebble large">
-            <img <?php echo $this->get_render_attribute_string('section_image') ?> />
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-medium.svg" ?>" class="shadow-filter sprite--pebble medium">
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-small.svg" ?>" class="shadow-filter sprite--pebble small">
-            <div class='text-area__content-container third text-area-content-container'>
-              <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
-                <?php echo $settings['section_title'] ?>
-              </h2>
-              <div <?php echo $this->get_render_attribute_string('section_description') ?> >
-                <?php echo $settings['section_description'] ?>
-              </div>
-            </div> <!-- .text-area__content-container -->
+        <section class="text-area text-area--right equal-height alternate boxed">
+          <div class="text-area__image-container text-area-image-container half">
+            <div class="text-area-image-container-inner">
+              <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-large.svg" ?>" class="shadow-filter sprite--pebble large">
+              <img <?php echo $this->get_render_attribute_string('section_image') ?> />
+              <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-medium.svg" ?>" class="shadow-filter sprite--pebble medium">
+              <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-small.svg" ?>" class="shadow-filter sprite--pebble small">
+            </div>
+          </div>
+          <div class='text-area__content-container third text-area-content-container'>
+            <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
+              <?php echo $settings['section_title'] ?>
+            </h2>
+            <div <?php echo $this->get_render_attribute_string('section_description') ?> >
+              <?php echo $settings['section_description'] ?>
+            </div>
+          </div> <!-- .text-area__content-container -->
         </section> <!-- .text-area -->
 
         <?php
@@ -179,11 +183,15 @@ class TextAreaRightAlt extends \Elementor\Widget_Base {
 
         #>
 
-        <section class="text-area text-area--right equal-height alternate">
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-large.svg" ?>" class="shadow-filter sprite--pebble large">
-            <img {{{ view.getRenderAttributeString('section_image') }}} />
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-medium.svg" ?>" class="shadow-filter sprite--pebble medium">
-            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-small.svg" ?>" class="shadow-filter sprite--pebble small">
+        <section class="text-area text-area--right equal-height alternate boxed">
+            <div class="text-area__image-container text-area-image-container half">
+              <div class="text-area-image-container-inner">
+                <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-large.svg" ?>" class="shadow-filter sprite--pebble large">
+                <img {{{ view.getRenderAttributeString('section_image') }}} />
+                <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-medium.svg" ?>" class="shadow-filter sprite--pebble medium">
+                <img src="<?php echo get_stylesheet_directory_uri() . "/assets/sprites/my-little-montessorian-pebble-sprite-small.svg" ?>" class="shadow-filter sprite--pebble small">
+              </div>
+            </div>
             <div class='text-area__content-container third text-area-content-container'>
               <h2 {{{ view.getRenderAttributeString('section_title') }}} >
                 {{{ settings.section.title }}}

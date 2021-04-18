@@ -6,17 +6,54 @@
 
 .text-area {
   &--right {
+    padding: 5rem 0;
     .text-area-image {
       padding: 0 6rem 0 0;
       -webkit-mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
       mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
       -webkit-mask-size: calc(100% - 6rem + 1px) 100%;
-      mask-size: 100% 100%;
+      mask-size: calc(100% - 6rem + 1px) 100%;
       -webkit-mask-position: left center;
       mask-position: left center;
     }
+    &.alternate {
+      .text-area-image-container {
+        display: flex;
+        place-content: center;
+        place-items: center;
+        padding: 0 calc(100% / 12 * 0.9);
+        .text-area-image-container-inner {
+          position: relative;
+        }
+      }
+      .text-area-image {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-mask-image: url("./assets/masks/my-little-montessorian-pebble-matte.svg");
+        mask-image: url("./assets/masks/my-little-montessorian-pebble-matte.svg");
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+        -webkit-mask-position: left center;
+        mask-position: left center;
+        position: relative;
+        z-index: 2;
+      }
+    }
   }
   &--left {
+    background-color: $color-five--60;
+    -webkit-mask-image: url("./assets/masks/my-little-montessorian-section-matte.png");
+    mask-image: url("./assets/masks/my-little-montessorian-section-matte.png");
+    -webkit-mask-positon: center center;
+    mask-position: center center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    padding: 2rem calc(100% / 12);
+    box-sizing: border-box;
+    .text-area-content-container {
+      padding-right: calc(100% / 10);
+    }
     .text-area-image {
       padding: 0 0 0 6rem;
     }

@@ -85,6 +85,9 @@ select {
   font-size: $font-size--p;
   font-family: $font-family--regular;
 }
+div {
+  font-family: $font-family--regular;
+}
 .typography {
   &--regular {
     font-family: $font-family--regular;
