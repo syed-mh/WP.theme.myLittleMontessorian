@@ -179,8 +179,11 @@ class TextAreaRightAlt extends \Elementor\Widget_Base {
 
         #>
 
-        <section class="text-area text-area--right equal-height">
+        <section class="text-area text-area--right equal-height alternate">
+            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-large.svg" ?>" class="shadow-filter sprite--pebble large">
             <img {{{ view.getRenderAttributeString('section_image') }}} />
+            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-medium.svg" ?>" class="shadow-filter sprite--pebble medium">
+            <img src="<?php echo get_stylesheet_directory_uri() . "assets/sprites/my-little-montessorian-pebble-sprite-small.svg" ?>" class="shadow-filter sprite--pebble small">
             <div class='text-area__content-container third text-area-content-container'>
               <h2 {{{ view.getRenderAttributeString('section_title') }}} >
                 {{{ settings.section.title }}}
