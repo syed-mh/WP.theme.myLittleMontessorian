@@ -101,21 +101,21 @@ class TextAreaRight extends \Elementor\Widget_Base {
         $this->add_render_attribute(
             'section_title',
             [
-                'class' => ['cta__title', 'title', 'cta-title', 'typography--accent']
+                'class' => ['text-area__title', 'title', 'text-area-title', 'typography--accent']
             ]
         );
 
         $this->add_render_attribute(
             'section_description',
             [
-                'class' => ['cta__description', 'cta-description', 'description']
+                'class' => ['text-area__description', 'text-area-description', 'description']
             ]
         );
 
         $this->add_render_attribute(
             'section_image',
             [
-                'class' => ['cta__image', 'half', 'cta-image'],
+                'class' => ['text-area__image', 'half', 'text-area-image'],
                 'src' => $settings['section_image']['url'],
                 'alt' => $settings['section_title']
             ]
@@ -123,17 +123,17 @@ class TextAreaRight extends \Elementor\Widget_Base {
         
         ?>
 
-        <section class="cta cta--right equal-height">
+        <section class="text-area text-area--right equal-height">
             <img <?php echo $this->get_render_attribute_string('section_image') ?> />
-            <div class='cta__content-container third cta-content-container'>
+            <div class='text-area__content-container third text-area-content-container'>
               <h2 <?php echo $this->get_render_attribute_string('section_title') ?> >
                 <?php echo $settings['section_title'] ?>
               </h2>
               <div <?php echo $this->get_render_attribute_string('section_description') ?> >
                 <?php echo $settings['section_description'] ?>
               </div>
-            </div> <!-- .cta__content-container -->
-        </section> <!-- .cta -->
+            </div> <!-- .text-area__content-container -->
+        </section> <!-- .text-area -->
 
         <?php
 
@@ -154,21 +154,21 @@ class TextAreaRight extends \Elementor\Widget_Base {
         view.addRenderAttribute(
             'section_title',
             {
-                'class': ['cta__title', 'title', 'cta-title', 'typography--accent']
+                'class': ['text-area__title', 'title', 'text-area-title', 'typography--accent']
             }
         );
 
         view.addRenderAttribute(
             'section_description',
             {
-                'class': ['cta__description', 'cta-description', 'description']
+                'class': ['text-area__description', 'text-area-description', 'description']
             }
         );
 
         view.addRenderAttribute(
             'section_image',
             {
-                'class': ['cta__image', 'half', 'cta-image'],
+                'class': ['text-area__image', 'half', 'text-area-image'],
                 'src': settings.section_image.url,
                 'alt': settings.section_title
             }
@@ -176,17 +176,17 @@ class TextAreaRight extends \Elementor\Widget_Base {
 
         #>
 
-        <section class="cta cta--right equal-height">
+        <section class="text-area text-area--right equal-height">
             <img {{{ view.getRenderAttributeString('section_image') }}} />
-            <div class='cta__content-container third cta-content-container'>
+            <div class='text-area__content-container third text-area-content-container'>
               <h2 {{{ view.getRenderAttributeString('section_title') }}} >
                 {{{ settings.section.title }}}
               </h2>
               <div {{{ view.getRenderAttributeString('section_description') }}} >
                 {{{ settings.section_description }}}
               </div>
-            </div> <!-- .cta__content-container -->
-        </section> <!-- .cta -->
+            </div> <!-- .text-area__content-container -->
+        </section> <!-- .text-area -->
 
         <?php
 

@@ -4,9 +4,9 @@
 // This file declares styles for the text area
 // component of the site
 
-.cta {
+.text-area {
   &--right {
-    .cta-image {
+    .text-area-image {
       padding: 0 6rem 0 0;
       -webkit-mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
       mask-image: url("./assets/masks/my-little-montessorian-text-area-mask--left.png");
@@ -17,13 +17,13 @@
     }
   }
   &--left {
-    .cta-image {
+    .text-area-image {
       padding: 0 0 0 6rem;
     }
   }
   &--center {
     padding: 5rem 0;
-    .cta-image {
+    .text-area-image {
       &.left {
         padding: 0 6rem 0 10rem;
         object-position: center center;
@@ -34,11 +34,11 @@
         object-position: right center;
       }
     }
-    .cta-content-container {
+    .text-area-content-container {
       padding: 0 6rem;
     }
   }
-  .cta-image {
+  .text-area-image {
     box-sizing: border-box;
     object-fit: contain;
     object-position: left center;
